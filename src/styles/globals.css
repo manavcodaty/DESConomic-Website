@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f5f2;
+  --surface: #ffffff;
+  --foreground: #121212;
+  --muted: #5b5b5b;
+  --line: #d6d6d6;
+  --accent: #b31b1b;
+  --accent-soft: #f1dbdb;
+  --max: 1200px;
+}
+
+* {
+  border-color: var(--line);
+}
+
+body {
+  background: radial-gradient(circle at top left, #fefefe, var(--background));
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.editorial-container {
+  margin-inline: auto;
+  width: min(var(--max), calc(100vw - 2rem));
+}
+
+.kicker {
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.headline-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 180ms ease;
+}
+
+.headline-link:hover,
+.headline-link:focus-visible {
+  text-decoration-color: var(--accent);
+}
+
+.card-lift {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card-lift:hover,
+.card-lift:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.prose-editorial h2,
+.prose-editorial h3,
+.prose-editorial h4 {
+  font-family: var(--font-headline), serif;
+  line-height: 1.2;
+  margin-top: 1.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.prose-editorial p {
+  margin-bottom: 1rem;
+  color: #1f1f1f;
+  line-height: 1.78;
+}
+
+.prose-editorial blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.4rem 0;
+  padding-left: 1rem;
+  color: #3b3b3b;
+  font-style: italic;
+}
+
+.prose-editorial ul,
+.prose-editorial ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.prose-editorial li {
+  margin-bottom: 0.4rem;
+}
